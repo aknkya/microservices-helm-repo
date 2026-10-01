@@ -33,3 +33,6 @@ probes:
 
 config:
   appEnvironment: "production"
+
+route:
+  enabled: false

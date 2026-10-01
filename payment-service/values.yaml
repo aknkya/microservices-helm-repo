@@ -33,3 +33,6 @@ probes:
 
 config:
   notificationServiceUrl: "http://notification-service:8082"
+
+route:
+  enabled: false

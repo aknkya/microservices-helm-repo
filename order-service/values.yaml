@@ -33,3 +33,6 @@ probes:
 
 config:
   paymentServiceUrl: "http://payment-service:8081"
+
+route:
+  enabled: true
