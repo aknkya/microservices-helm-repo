@@ -7,3 +7,4 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name }}
 data:
   APP_ENV: {{ .Values.config.appEnvironment | quote }}
+  APP_ENVIRONMENT: {{ .Values.config.appEnvironment | quote }}
