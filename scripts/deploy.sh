@@ -31,7 +31,8 @@ for SVC in "${SERVICES[@]}"; do
     helm upgrade --install "$SVC" "$SCRIPT_DIR/../$SVC" \
         -n "$NAMESPACE" \
         --set "image.tag=$TAG" \
-        --set "image.repository=$REGISTRY/$SVC"
+        --set "image.repository=$REGISTRY/$SVC" \
+        --force-conflicts
     echo "✅ $SVC başarıyla kuruldu."
 done
 

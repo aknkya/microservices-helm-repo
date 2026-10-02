@@ -64,7 +64,8 @@ foreach ($svc in $services) {
     $helmArgs = @(
         "upgrade", "--install", $svc, $chartPath,
         "-n", $Namespace,
-        "--set", "image.tag=$Tag"
+        "--set", "image.tag=$Tag",
+        "--force-conflicts"
     )
     if ($Registry) {
         $helmArgs += @("--set", "image.repository=$Registry/$svc")
